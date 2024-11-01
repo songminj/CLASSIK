@@ -1,11 +1,11 @@
-package com.ssafy.classik
+package com.ssafy.Classik_Backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ClassikApplication
+class ClassikBackendApplication
 
 fun main(args: Array<String>) {
-	runApplication<ClassikApplication>(*args)
+	runApplication<ClassikBackendApplication>(*args)
 }
