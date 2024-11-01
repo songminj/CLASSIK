@@ -1,10 +1,10 @@
-package com.ssafy.classik
+package com.ssafy.Classik_Backend
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ClassikApplicationTests {
+class ClassikBackendApplicationTests {
 
 	@Test
 	fun contextLoads() {
