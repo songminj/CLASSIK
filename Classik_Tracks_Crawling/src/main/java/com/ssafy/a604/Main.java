@@ -1,4 +1,4 @@
-package com.ssafy.a303;
+package com.ssafy.a604;
 
 public class Main {
 
