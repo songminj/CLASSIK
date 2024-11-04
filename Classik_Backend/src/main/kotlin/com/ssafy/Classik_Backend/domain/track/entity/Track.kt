@@ -1,21 +1,3 @@
-package com.ssafy.Classik_Backend.domain.track.entity
-
-import jakarta.persistence.*
-
-@Entity
-class Track(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
-    val title: String,
-    val composer: String,
-    val tags: String,
-
-    @Column(name = "video_id")
-    val videoId: String,
-    @Column(name = "image_url")
-    val imageUrl: String,
-    @Column(name = "haptic_time")
-    val hapticTime: String,
-    @Column(name = "haptic_intensity")
-    val hapticIntensity: String,
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba989d0a578fcbb1324950796ff8b56947469db7242495397b76b465cf9068eb
+size 584
