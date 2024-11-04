@@ -1,4 +1,4 @@
-package com.ssafy.Classik_Backend.auth.entity
+package com.ssafy.Classik_Backend.domain.User
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class UserEntity {
+class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int = 0
