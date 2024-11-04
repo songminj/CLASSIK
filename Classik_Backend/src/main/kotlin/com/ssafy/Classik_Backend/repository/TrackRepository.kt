@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 @Repository
 interface TrackRepository : JpaRepository<Track, Long> {
 
-    fun findByTitle(title: String): Track?
-    fun findByComposer(title: String): Track?
+    fun findAllByTitle(title: String): List<Track>
+    fun findAllByComposer(composer: String): List<Track>
 
 }
