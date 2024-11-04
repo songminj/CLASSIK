@@ -5,7 +5,7 @@ import jakarta.persistence.*
 @Entity
 class Track(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Long,
     val title: String,
     val composer: String,
     val tags: String,
