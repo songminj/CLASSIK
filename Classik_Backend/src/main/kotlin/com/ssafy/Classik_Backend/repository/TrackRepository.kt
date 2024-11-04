@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository
 interface TrackRepository : JpaRepository<Track, Long> {
 
     fun findAllByTitle(title: String): List<Track>
-    fun findAllByComposer(composer: String): List<Track>
 
 }
