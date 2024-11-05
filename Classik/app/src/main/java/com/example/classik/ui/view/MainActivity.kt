@@ -1,4 +1,4 @@
-package com.example.classik
+package com.example.classik.ui.view
 
 import MainScreen
 import android.os.Bundle
