@@ -1,4 +1,4 @@
-package com.example.classik.data
+package com.example.classik.data.model
 
 data class PlaylistItem(
     val id: Int,

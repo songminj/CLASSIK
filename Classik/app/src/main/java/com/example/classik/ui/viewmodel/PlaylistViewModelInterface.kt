@@ -1,6 +1,6 @@
-package com.example.classik.viewmodel
+package com.example.classik.ui.viewmodel
 
-import com.example.classik.data.PlaylistItem
+import com.example.classik.data.model.PlaylistItem
 
 interface PlaylistViewModelInterface {
     val playlist: List<PlaylistItem>
