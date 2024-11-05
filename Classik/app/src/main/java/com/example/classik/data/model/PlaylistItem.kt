@@ -8,8 +8,3 @@ data class PlaylistItem(
     val thumbnailUrl: String
 //    val tags: List<Tags>
 )
-
-//data class Tags(
-//    val type: String,
-//    val content: String
-//)
