@@ -5,7 +5,7 @@ import com.ssafy.Classik_Backend.entity.Track
 
 interface TrackService {
 
-    fun getTrack(id: Long): TrackResponseDto
+    fun getTrack(id: Int): TrackResponseDto
     fun searchTracks(word: String): List<Track>
 
 }
