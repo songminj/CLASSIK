@@ -1,4 +1,4 @@
-package com.ssafy.Classik_Backend.domain.track.entity
+package com.ssafy.Classik_Backend.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

@@ -1,4 +1,4 @@
-package com.ssafy.Classik_Backend.domain.User
+package com.ssafy.Classik_Backend.entity
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
