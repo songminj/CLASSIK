@@ -9,6 +9,7 @@ class Composer(
     val id: Int,
 
     val name: String,
+    @Column(columnDefinition = "text")
     val description: String,
 
     @OneToMany(mappedBy = "composer", cascade = [CascadeType.ALL], orphanRemoval = true)
