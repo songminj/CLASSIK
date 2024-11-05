@@ -1,11 +1,9 @@
 package com.example.classik.ui.viewmodel
 
-import com.example.classik.data.model.PlaylistItem
+import com.example.classik.data.model.Playlist
 
 interface PlaylistViewModelInterface {
-    val playlist: List<PlaylistItem>
+    val playlists: List<Playlist>
     val itemCount: Int
-
-    fun addPlaylistItem(item: PlaylistItem)
-    fun deletePlaylistItems(items: List<PlaylistItem>)
+    fun fetchAllPlaylists(userId: Int)
 }
