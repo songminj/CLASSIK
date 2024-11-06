@@ -1,13 +1,3 @@
-// MusicViewModel.kt
-package com.example.classik.ui.viewmodel
-
-import android.content.Context
-import androidx.lifecycle.ViewModel
-import com.example.classik.ui.component.WebViewManager
-
-class MusicViewModel : ViewModel() {
-    fun initializeWebView(context: Context, videoId: String) = WebViewManager.initialize(context, videoId)
-    fun play() = WebViewManager.playVideo()
-    fun pause() = WebViewManager.pauseVideo()
-    fun seekTo(time: Float) = WebViewManager.seekTo(time)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d774db3df4ac1ff88b7481392effc72b9e6507c4f423552b37eccb3c52f4f27c
+size 762
