@@ -15,5 +15,5 @@ class PlaylistTrack(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "playlist_track_id")
-    val id: Int? = null
+    val id: Int = 0
 }
