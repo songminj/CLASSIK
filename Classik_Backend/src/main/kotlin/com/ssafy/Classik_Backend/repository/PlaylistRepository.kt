@@ -1,12 +1,12 @@
 package com.ssafy.Classik_Backend.repository
 
-import com.ssafy.Classik_Backend.entity.Track
+import com.ssafy.Classik_Backend.entity.Playlist
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface TrackRepository : JpaRepository<Track, Int> {
+interface PlaylistRepository : JpaRepository<Playlist, Int> {
 
-    fun findAllByTitle(title: String): List<Track>
+    fun findByUserId(userId: Int): List<Playlist>
 
 }

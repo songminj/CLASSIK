@@ -1,6 +1,6 @@
 package com.ssafy.Classik_Backend.repository
 
-import com.ssafy.Classik_Backend.domain.User.User
+import com.ssafy.Classik_Backend.entity.User
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserRepository : JpaRepository<User, Int> {
