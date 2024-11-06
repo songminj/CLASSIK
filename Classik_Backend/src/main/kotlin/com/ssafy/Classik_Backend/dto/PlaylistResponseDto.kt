@@ -1,11 +1,6 @@
 package com.ssafy.Classik_Backend.dto
 
-class PlaylistResponseDto(
+data class PlaylistResponseDto(
     val title: String,
-) {
-    val tracks: MutableList<TrackResponseDto> = mutableListOf()
-
-    fun addTrack(toDto: TrackResponseDto) {
-        tracks.add(toDto)
-    }
-}
+    val tracks: MutableList<TrackDetailResponseDto>,
+)
