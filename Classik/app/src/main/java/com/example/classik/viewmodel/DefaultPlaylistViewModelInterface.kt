@@ -1,4 +1,4 @@
-package com.example.classik.ui.viewmodel
+package com.example.classik.viewmodel
 
 import com.example.classik.data.model.PlaylistItem
 
