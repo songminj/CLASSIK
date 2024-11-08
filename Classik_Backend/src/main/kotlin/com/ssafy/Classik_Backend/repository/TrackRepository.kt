@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository
 interface TrackRepository : JpaRepository<Track, Int> {
 
     fun findAllByTitle(title: String): List<Track>
+    fun findByTagsContaining(content: String): List<Track>
 
 }
