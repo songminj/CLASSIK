@@ -1,24 +1,3 @@
-package com.example.classik.network
-
-import com.example.classik.data.model.Playlist
-import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Path
-
-interface ApiService {
-    // 회원가입,로그인
-
-    // 홈
-
-    // 검색
-
-    // 플레이리스트
-    // 전체 조회
-    @GET("{userId}/playlists")
-    fun getAllPlaylists(@Path("userId") userId: Int): Call<List<Playlist>>
-
-
-    // 최근 재생 기록
-
-    // 음악 재생 페이지
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:740a23264c8ae83e01d7dd35b57952c3f8c2de3cd5835b03bf7d4de2adc2cc79
+size 939

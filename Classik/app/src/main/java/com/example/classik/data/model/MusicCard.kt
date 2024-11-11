@@ -6,5 +6,5 @@ data class MusicCardData(
     val title: String,
     val composer: String,
     val thumbnailUrl: String,
-    val tags: List<Tags>
+    val tags: List<String>
 )

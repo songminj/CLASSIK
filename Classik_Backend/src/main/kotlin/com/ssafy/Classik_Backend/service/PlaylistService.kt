@@ -9,5 +9,6 @@ interface PlaylistService {
     fun createPlaylist(requestDto: PlaylistCreateRequestDto): PlaylistCreateResponseDto
     fun updatePlaylist(playlistId: Int, requestDto: PlaylistUpdateRequestDto): PlaylistResponseDto
     fun deletePlaylist(playlistId: Int)
+    fun deletePlaylistTrack(playlistTrackId: Int)
 
 }
