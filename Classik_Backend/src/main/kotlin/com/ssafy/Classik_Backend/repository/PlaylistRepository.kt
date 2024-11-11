@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface PlaylistRepository : JpaRepository<Playlist, Int> {
 
-    fun findByUserId(userId: Int): List<Playlist>
+    fun findByMemberId(userId: Int): List<Playlist>
 
 }
