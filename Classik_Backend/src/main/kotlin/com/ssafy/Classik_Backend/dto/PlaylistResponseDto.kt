@@ -4,5 +4,5 @@ data class PlaylistResponseDto(
     val playlistTitle: String,
     val playlistId: Int,
     val trackCount: Int,
-    val tracks: MutableList<TrackSimpleResponseDto>,
+    val tracks: MutableList<PlaylistTrackResponseDto>,
 )
