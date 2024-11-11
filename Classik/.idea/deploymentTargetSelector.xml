@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="deploymentTargetSelector">
-    <selectionStates>
-      <SelectionState runConfigName="app">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-    </selectionStates>
-  </component>
-</project>
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ae02d2130cb025905f6c64413a55de5ce122ff34301526c1b8ef39e61048c15
+size 654
