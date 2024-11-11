@@ -7,11 +7,12 @@ import jakarta.persistence.Id
 
 @Entity
 class RefreshToken {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int = 0
+    var id: Long? = null
 
-    var username: String? = null
+    var email: String? = null
     var refresh: String? = null
     var expiration: String? = null
 }
