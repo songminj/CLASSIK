@@ -1,10 +1,10 @@
 package com.example.classik.data.model
 
-data class Playlist (
+data class AllPlaylistItem (
     val playlistId: Int,
-    val title: String,
+    val playlistTitle: String,
     val trackCount: Number,
-    val thumbnails: List<Thumbnails>
+    val thumbnailUrls: List<Thumbnails>
 )
 
 data class Thumbnails (
