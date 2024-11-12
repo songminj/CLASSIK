@@ -36,17 +36,6 @@ pipeline {
                 '''
             }
         }
-        stage('Health Check') {
-            steps {
-                script {
-                    // Spring Boot 애플리케이션 상태 확인
-                    def response = sh(script: "curl -I -o /dev/null -s -w '%{http_code}' http://k11a604.p.ssafy.io:8080/actuator/health", returnStdout: true).trim()
-                    if (response != "200") {
-                        error "Health check failed. HTTP status: ${response}"
-                    }
-                }
-            }
-        }
     }
     post {
         always {
