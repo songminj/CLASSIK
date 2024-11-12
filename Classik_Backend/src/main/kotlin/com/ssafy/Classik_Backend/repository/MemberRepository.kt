@@ -1,6 +1,6 @@
-package com.ssafy.Classik_Backend.auth.repository
+package com.ssafy.Classik_Backend.repository
 
-import com.ssafy.Classik_Backend.auth.entity.Member
+import com.ssafy.Classik_Backend.entity.Member
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 
