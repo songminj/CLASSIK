@@ -1,17 +1,3 @@
-package com.ssafy.Classik_Backend.entity
-
-import jakarta.persistence.*
-
-@Entity
-class Composer(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "composer_id", nullable = false)
-    val id: Int,
-
-    val name: String,
-    @Column(columnDefinition = "text")
-    val description: String,
-
-    @OneToMany(mappedBy = "composer", cascade = [CascadeType.ALL], orphanRemoval = true)
-    val tracks: MutableSet<Track> = mutableSetOf(),
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9705f9834ebf4d6e0ad82b30df508ffc8707f7fcb138caa639d42a28a5961ed4
+size 537
