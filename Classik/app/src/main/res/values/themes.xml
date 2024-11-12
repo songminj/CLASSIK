@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Classik.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="postSplashScreenTheme">@style/Theme.Classik</item>
+    <style name="Theme.Classik" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/darkgray</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
-    <style name="Theme.Classik" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Classik.Starting" parent="Theme.Classik" />
 </resources>
