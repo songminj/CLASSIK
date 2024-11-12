@@ -3,10 +3,10 @@ package com.example.classik.data.model
 data class RecommendList (
     val recommendTitle: String,
     val recommendImageUrl: String,
-    val recommendTracks: List<RecommendItem>,
+    val recommendTracks: List<BaseTrackItem>,
 )
 
-data class RecommendItem (
+data class BaseTrackItem (
     val trackId: Int,
     val title: String,
     val composer: String,

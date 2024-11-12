@@ -6,5 +6,6 @@ data class PlaylistItem(
     val composer: String,
     val thumbnailUrl: String,
     val playlistTrackId: Int,
-    val tags: List<String>
+    val tags: List<String>,
+    val description: String
 )
