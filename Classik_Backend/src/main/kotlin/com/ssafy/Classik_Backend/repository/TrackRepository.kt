@@ -9,5 +9,6 @@ interface TrackRepository : JpaRepository<Track, Int> {
 
     fun findAllByTitle(title: String): List<Track>
     fun findByTagsContaining(content: String): List<Track>
+    fun findByTitle(title: String): Track
 
 }
