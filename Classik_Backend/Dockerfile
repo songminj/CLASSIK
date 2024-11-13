@@ -4,9 +4,6 @@ FROM openjdk:17-jdk-slim
 # Set working directory in container
 WORKDIR /app
 
-# Install necessary tools including MySQL (MariaDB) client
-RUN apt-get update && apt-get install -y mariadb-client && apt-get clean
-
 # Copy the JAR file into the container
 COPY build/libs/Classik_Backend-0.0.1-SNAPSHOT.jar app.jar
 
