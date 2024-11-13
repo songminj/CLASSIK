@@ -32,7 +32,7 @@ pipeline {
                 // 기존 컨테이너 종료 및 새 컨테이너 실행
                 sh '''
                 docker-compose -f $DOCKER_COMPOSE_PATH down
-                docker-compose -f $DOCKER_COMPOSE_PATH up -d
+                docker-compose -f $DOCKER_COMPOSE_PATH up -d --build
                 '''
             }
         }
