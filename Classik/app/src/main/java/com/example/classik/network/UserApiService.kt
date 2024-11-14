@@ -9,9 +9,9 @@ interface UserApiService {
     @GET("/")
     fun getTest(): Call<String>
 
-
     @POST("/auth-logout")
     fun logout(
         @Header("Authorization") authorization: String,
+        @Header("Cookie") refresh: String,
     ): Call<Void>
 }
