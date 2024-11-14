@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_COMPOSE_PATH = "/home/ubuntu/S11P31A604/docker-compose.yml"
+        DOCKER_COMPOSE_PATH = "/var/lib/jenkins/workspace/604ound/docker-compose.yml"
         BACKEND_JAR_PATH = "build/libs/Classik_Backend-0.0.1-SNAPSHOT.jar"
     }
     stages {
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 // 기존 컨테이너 종료 및 새 컨테이너 실행
                 sh '''
-                docker-compose -f $DOCKER_COMPOSE_PATH down
+                docker-compose -f $DOCKER_COMPOSE_PATH stop
                 docker-compose -f $DOCKER_COMPOSE_PATH up -d --build
                 '''
             }
