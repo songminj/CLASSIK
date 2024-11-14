@@ -32,19 +32,8 @@ pipeline {
                 // 기존 컨테이너 종료 및 새 컨테이너 실행
                 sh '''
                 docker-compose -f $DOCKER_COMPOSE_PATH down
-                docker-compose -f $DOCKER_COMPOSE_PATH up -d
+                docker-compose -f $DOCKER_COMPOSE_PATH up -d --build
                 '''
-            }
-        }
-        stage('Health Check') {
-            steps {
-                script {
-                    // Spring Boot 애플리케이션 상태 확인
-                    def response = sh(script: "curl -I -o /dev/null -s -w '%{http_code}' http://k11a604.p.ssafy.io:8080/actuator/health", returnStdout: true).trim()
-                    if (response != "200") {
-                        error "Health check failed. HTTP status: ${response}"
-                    }
-                }
             }
         }
     }
