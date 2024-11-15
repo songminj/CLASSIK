@@ -7,7 +7,7 @@ data class MusicDetail (
     val description: String,
     val tags: List<String>,
     val videoId: String,
-    val imageUrl: String,
+    val imageUrl: String?,
     val vrImageUrl: String,
     val thumbnailUrl: String,
     val hapticTime: List<String>,
