@@ -1,7 +1,7 @@
 package com.ssafy.Classik_Backend.dto
 
 data class TracksFromSearchingServerDto(
-    val item: ArrayList<SearchedTrack> = ArrayList<SearchedTrack>()
+    val items: ArrayList<List<SearchedTrack>> = ArrayList()
 )
 
 data class SearchedTrack(
