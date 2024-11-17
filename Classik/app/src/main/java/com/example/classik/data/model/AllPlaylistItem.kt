@@ -4,9 +4,5 @@ data class AllPlaylistItem (
     val playlistId: Int,
     val playlistTitle: String,
     val trackCount: Number,
-    val thumbnailUrls: List<Thumbnails>
-)
-
-data class Thumbnails (
-    val thumbnailUrl: String
+    val thumbnailUrls: List<String>
 )
