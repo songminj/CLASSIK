@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c69e39db8d7e5fff4c9f2bb92beb4a43ff6dc6c9dc84818c8a3ccfcf25339423
-size 526
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\SSAFY\Desktop\S11P31A604\Classik\app\unityLibrary\src\main\shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\SSAFY\Desktop\S11P31A604\Classik\app\unityLibrary\src\debug\shaders"/></dataSet></merger>
