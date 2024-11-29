@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d8bd44d9b038bc3f71f63735c2bafe114dd1273ece42da005eb6b3adae1a5f09
-size 556
+package com.ssafy.Classik_Backend.entity
+
+import jakarta.persistence.*
+
+@Entity
+class Playlist(
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "playlist_id", nullable = false)
+    val id: Int = 0,
+
+    val title: String,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id", nullable = false)
+    val member: Member,
+
+    @OneToMany(mappedBy = "playlist", cascade = [CascadeType.ALL], orphanRemoval = true, fetch = FetchType.LAZY)
+    val playlistTracks: MutableList<PlaylistTrack> = mutableListOf(),
+)

@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74eed03c62e97d98bf430b3efda8e0f63d7781e39df18c7cd448bfc51e220700
-size 857
+package com.ssafy.Classik_Backend.controller
+
+import com.ssafy.Classik_Backend.dto.SearchHistoryResponseDto
+import com.ssafy.Classik_Backend.dto.TrackSimpleResponseDto
+import com.ssafy.Classik_Backend.service.SearchService
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.*
+
+@RestController
+@RequestMapping("/search")
+class SearchController(
+    private val searchService: SearchService
+) {
+
+    @GetMapping("/{search}")
+    fun search(@PathVariable search: String): ResponseEntity<List<TrackSimpleResponseDto>> {
+        return ResponseEntity(searchService.search(search), HttpStatus.OK)
+    }
+
+    @GetMapping
+    fun getSearchHistory(): ResponseEntity<SearchHistoryResponseDto> {
+        return ResponseEntity(searchService.getSearchHistory(), HttpStatus.OK)
+    }
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f1cf963cd77bd1674c689bf19f61d5006adc8837c3bdfd30c9c09eb8d98c39f6
-size 563
+from fastapi import APIRouter, HTTPException, Depends
+from .schemas import SearchRequest, SearchResponse
+from .service import search_data
+from sqlalchemy.orm import Session
+from database import get_db
+
+# FastAPI APIRouter 객체 생성
+router = APIRouter()
+
+@router.post("/search", response_model=SearchResponse)
+async def search_word(request: SearchRequest, db: Session = Depends(get_db)):
+    try:
+        result = await search_data(request.query, db)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

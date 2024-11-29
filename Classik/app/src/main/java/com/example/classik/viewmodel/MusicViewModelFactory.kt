@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cde1ea346c2d888302241509769bc44ea109c4a82de7b39135d63e01ddd8300d
-size 549
+package com.example.classik.viewmodel
+
+import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+
+class MusicViewModelFactory(private val context: Context) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(MusicViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return MusicViewModel(context) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

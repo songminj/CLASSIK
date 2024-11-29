@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f9b1edf0cb3f16962cb8f105d758cdc9f6d25693da673c8060cf217bd1488c0
-size 761
+package com.ssafy.Classik_Backend.controller
+
+import com.ssafy.Classik_Backend.dto.TrackSimpleResponseDto
+import com.ssafy.Classik_Backend.service.PlaybackHistoryService
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+@RequestMapping("/history")
+class PlaybackHistoryController(private val playbackHistoryService: PlaybackHistoryService) {
+
+    @GetMapping
+    fun getHistory() : ResponseEntity<List<TrackSimpleResponseDto>>{
+        return ResponseEntity(playbackHistoryService.getHistoryList(), HttpStatus.OK)
+    }
+
+}

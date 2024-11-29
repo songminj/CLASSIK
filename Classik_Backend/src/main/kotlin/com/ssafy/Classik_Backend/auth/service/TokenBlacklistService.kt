@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c02857ff873cd9ea9d35f0a24a6adaac28ad2771e42da59e8afdc450e6daaac
-size 778
+package com.ssafy.Classik_Backend.auth.service
+
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.redis.core.RedisTemplate
+import org.springframework.stereotype.Service
+import java.util.concurrent.TimeUnit
+
+@Service
+class TokenBlacklistService @Autowired constructor(private val redisTemplate: RedisTemplate<String, String>) {
+    // 토큰을 블랙리스트에 추가
+    fun addToBlacklist(token: String, expirationTime: Long) {
+        val valueOperations = redisTemplate.opsForValue()
+        valueOperations[token, "blacklisted", expirationTime] = TimeUnit.MILLISECONDS
+    }
+
+    // 토큰이 블랙리스트에 있는지 확인
+    fun isBlacklisted(token: String): Boolean {
+        return redisTemplate.hasKey(token)
+    }
+}

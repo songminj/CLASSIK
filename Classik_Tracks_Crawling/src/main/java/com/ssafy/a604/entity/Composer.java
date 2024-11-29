@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7abfc659fa5fd1397193f44cb70f348c13ec4dc01e9b23dd337b8340a07805a
-size 526
+package com.ssafy.a604.entity;
+
+public class Composer {
+
+    private final String name;
+    private final String description;
+
+    public Composer(String composer, String description) {
+        this.name = composer;
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public String toString() {
+        return "Composer [name=" + name + ", description=" + description + "]";
+    }
+
+}

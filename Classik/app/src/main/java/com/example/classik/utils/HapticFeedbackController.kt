@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e9694f907d767067240ded1eae46094b036565ebaf7e4be03daf5adcd6cacda
-size 572
+package com.example.classik.utils
+
+import android.content.Context
+import android.os.VibrationEffect
+import android.os.Vibrator
+
+class HapticFeedbackController(private val context: Context) {
+    private val vibrator: Vibrator? = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+
+    fun triggerHapticFeedback(intensity: Int) {
+        val vibrationEffect = VibrationEffect.createOneShot(intensity.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
+        vibrator?.vibrate(vibrationEffect)
+    }
+
+    fun stopHapticFeedback() {
+        vibrator?.cancel()
+    }
+}

@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69d9cdf4fc8c36d955a6faa3c87724510fe151133c77a81b6453ea7084b339b0
-size 961
+package com.ssafy.Classik_Backend.controller
+
+import com.ssafy.Classik_Backend.auth.dto.CustomMemberDetails
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.stereotype.Controller
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+@ResponseBody
+class MainController {
+
+    @GetMapping("/")
+    fun mainP(): String {
+        val authentication = SecurityContextHolder.getContext().authentication
+        println("Authentication: $authentication")
+        println("Principal: ${authentication.principal}")
+
+        val principal = authentication.principal
+        val nickname = if (principal is CustomMemberDetails) {
+            principal.nickname ?: "Anonymous"
+        } else {
+            "Anonymous"
+        }
+
+        return "main Controller: $nickname"
+    }
+}

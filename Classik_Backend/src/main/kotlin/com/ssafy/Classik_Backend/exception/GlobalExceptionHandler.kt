@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d6652ab210590ea69aa135b412b9dd940270414b571d495ae2645261050733f
-size 811
+package com.ssafy.Classik_Backend.exception
+
+import lombok.RequiredArgsConstructor
+import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.ExceptionHandler
+import org.springframework.web.bind.annotation.RestControllerAdvice
+
+@RestControllerAdvice
+@RequiredArgsConstructor
+class GlobalExceptionHandler {
+
+    @ExceptionHandler(IllegalArgumentException::class)
+    fun exceptionHandler(illegalArgumentException: IllegalArgumentException): ResponseEntity<Any?> {
+        val resHeaders = HttpHeaders()
+        resHeaders.add("Content-Type", "application/json;charset=UTF-8")
+        return ResponseEntity<Any?>(illegalArgumentException.message, resHeaders, HttpStatus.BAD_REQUEST)
+    }
+
+}

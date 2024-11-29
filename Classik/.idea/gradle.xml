@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36895e345ae4ed1249ae8d64a3a2df05fea7e8dd996cec4f8696c7a4a0176fbe
-size 842
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/unityLibrary" />
+            <option value="$PROJECT_DIR$/app/unityLibrary/xrmanifest.androidlib" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
